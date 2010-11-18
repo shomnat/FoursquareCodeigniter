@@ -1,0 +1,67 @@
+@author Somnath Mitra
+@email <shomnat@yahoo.com>
+@date November 18th 2010
+
+This is a Codegniter library to interact with Foursquare.
+It uses the popular Foursquare library for PHP developed by Jaisen Mathai
+as the core.
+It is just a basic Codeigniter library to get started with Foursquare,
+but in terms of a Foursquare library - it is pretty good as the base is
+from Jaisen Mathai's PHP library.
+
+Codeigniter gurus - kindly forgive me for not sticking to the MVC pattern,
+as this just an introductory library.
+ And also it can be improved by doing several things such as autoloads,
+consumer keys and secrets can be kept on a separate config file and so on.
+
+
+Codeigniter Details
+
+library:
+
+/system/application/libraries/Foursquare.php
+/system/application/libraries/MY_Input.php
+
+MY_Input.php is a hack needed to pass query strings to Codeigniter.
+It was developed by Jamie Rumbelow.
+
+controllers:
+/system/application/libraries/foursquareController.php
+
+How to use this ?
+
+1. Download the entire repo. It has a full codeigniter setup.
+2. The codeigniter setup has its own htaccess for url shortening,
+   so that we can use 'http://localhost:8888/FoursquareCodeigniter/controller/method'
+   instead of 'http://localhost:8888/FoursquareCodeigniter/index.php/controller/method'
+3. Change your config file:
+   filename: system/application/config/config.php
+   //
+   $config['base_url']	= "http://localhost:8888/FoursquareCodeigniter/";
+   //
+   change the localhost and or port number to ur setting.
+4. Go to https://foursquare.com/oauth/
+5. Register your consumer as following ( u need to have a foursquare account)
+   Application Name: FourSquareCodeigniter
+   Application Web Site: http://localhost:8888/FourSquareCodeigniter/foursquareController/index
+   Callback URL: http://localhost:8888/FourSquareCodeigniter/foursquareController/callback
+6. Copy the consumer key and the consumer secret to the controller.
+        There are two places that you have to change inside
+        /system/application/libraries/foursquareController.php
+        look at the function callback()
+               // change keys there
+        look at the function index()
+                // change keys there
+7. You are now setup
+8. Fire up ur favorite browser, and go to
+   http://localhost:8888/FourSquareCodeigniter/foursquareController/index
+You should be able to login through Foursquare.
+Foursquare will ask u for permission.
+Give it permission and then see the total number of checkins,
+and where you have checked in. I think this will always return 20 as the max
+as the call is rate limited to 20 results.
+
+Please see foursquare api docs and Jaisen Mathai's
+docs for other function calls.
+
+Happy Foursquaring !!!
