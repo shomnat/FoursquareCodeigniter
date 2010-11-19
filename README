@@ -28,7 +28,7 @@ It was developed by Jamie Rumbelow.
 controllers:
 /system/application/libraries/foursquareController.php
 
-How to use this ?
+How to use this codeigniter app ?
 
 1. Download the entire repo. It has a full codeigniter setup.
 2. The codeigniter setup has its own htaccess for url shortening,
@@ -37,7 +37,7 @@ How to use this ?
 3. Change your config file:
    filename: system/application/config/config.php
    //
-   $config['base_url']	= "http://localhost:8888/FoursquareCodeigniter/";
+   $config['base_url']	= "http://localhost:8888/FoursquareCodeigniter//";
    //
    change the localhost and or port number to ur setting.
 4. Go to https://foursquare.com/oauth/
@@ -47,7 +47,7 @@ How to use this ?
    Callback URL: http://localhost:8888/FourSquareCodeigniter/foursquareController/callback
 6. Copy the consumer key and the consumer secret to the controller.
         There are two places that you have to change inside
-        /system/application/libraries/foursquareController.php
+        /system/application/controllers/foursquareController.php
         look at the function callback()
                // change keys there
         look at the function index()
