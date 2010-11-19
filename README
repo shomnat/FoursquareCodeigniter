@@ -37,7 +37,7 @@ How to use this codeigniter app ?
 3. Change your config file:
    filename: system/application/config/config.php
    //
-   $config['base_url']	= "http://localhost:8888/FoursquareCodeigniter//";
+   $config['base_url']	= http://localhost:8888/FoursquareCodeigniter/;
    //
    change the localhost and or port number to ur setting.
 4. Go to https://foursquare.com/oauth/
