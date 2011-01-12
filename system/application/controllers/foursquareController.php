@@ -14,9 +14,11 @@ class FoursquareController extends Controller {
 	public function callback()
 	{
 		// Please put in your keys here.
+                //echo $_REQUEST['oauth_token'];
 		$consumer_key = 'your_consumer_key';
 		$consumer_secret = 'your_consumer_secret';
                 $foursquareObj = new $this->foursquare($consumer_key, $consumer_secret);
+                //echo($_REQUEST['oauth_token']);
                 $foursquareObj->setToken($_REQUEST['oauth_token'],$this->session->userdata('secret'));
                 $token = $foursquareObj->getAccessToken();
                 $foursquareObj->setToken($token->oauth_token, $token->oauth_token_secret);

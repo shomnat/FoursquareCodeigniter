@@ -65,3 +65,13 @@ Please see foursquare api docs and Jaisen Mathai's
 docs for other function calls.
 
 Happy Foursquaring !!!
+
+Changes:
+
+1. There were some errors with the config file which is fixed now.
+2. Added ? character to the list of characters permitted in uri in the config file
+        $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-?';
+3. Allowed query strings in the url in the config file
+        $config['enable_query_strings'] = TRUE;
+
+

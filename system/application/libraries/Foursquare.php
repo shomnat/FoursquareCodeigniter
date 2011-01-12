@@ -29,7 +29,7 @@ class Foursquare extends EpiOAuth
   protected $authorizeUrl   = 'http://foursquare.com/oauth/authorize';
   //protected $authenticateUrl= 'http://foursquare.com/oauth/authorize'; // In case four square implements sign in with like Twitter
   protected $apiUrl         = 'http://api.foursquare.com';
-  protected $userAgent      = 'EpiFoursquare (http://github.com/jmathai/foursquare-async/tree/)';
+  protected $userAgent      = 'FoursquareCodeigniter';
   protected $apiVersion     = 'v1';
   protected $isAsynchronous = false;
 
